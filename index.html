@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Stop Denial of Care provision</title>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-7 order-md-0 order-1">
+                    <h2 class="hero-heading">Stop the Denial of Care Provision (Section 7) before it’s too late!</h2>
+                    <a href="#" class="hero-btn">Act Now!</a>
+                </div>
+                <div class="col-md-5 order-md-1 order-0 mb-5 mb-md-0">
+                    <img src="images/Nurse.jpg" alt="Nurse" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="white-section py-5">
+        <div class="py-5">
+
+            <div class="container text-blue">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-4 col-md-5 order-md-0 order-1">
+                        <div class="text-box">
+                            <h3>What happens if SB 68 passes?</h3>
+                            
+                            <p>
+                                Medicare and Medicaid patients will lose access to care—except for catastrophic cases. 
+                                
+                                <br><br>
+                                
+                                Doctors could be forced out of business, reducing patient choice. 
+                                
+                                <br><br>
+
+                                Insurance companies will pay even less, making it impossible for independent doctors to serve underinsured patients.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 order-md-1 order-0 mb-5 mb-md-0">
+                        <h1 style="font-weight: bold;" class="mb-5">Georgia doctors provide compassionate care to patients in need, often at great personal and financial risk. But SB 68’s Denial of Care provision (Section 7) will strip doctors of fair compensation and force them to turn away the most vulnerable patients.</h1>
+                        <h2 style="font-weight: 500;">This isn’t about reducing healthcare costs—it’s about giving insurance companies the power to decide who gets treated and who suffers.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container py-5">
+                <div class="row mt-5">
+                    <div class="col-sm-12">
+                        <div class="form-wrapper">
+                            <h1>ACT NOW:</h1>
+                            <h2>Demand lawmakers REMOVE the Denial of Care provision (Section 7) from SB 68!</h2>
+
+                            <div class="row justify-content-between">
+                                <div class="col-md-4">
+                                    <img src="images/Child.jpg" alt="Child" class="image-radius">
+                                </div>
+
+                                <div class="col-md-7">
+                                    <form id="contact-form">
+                                        <input type="text" id="name" name="name" placeholder="Name" required>
+                                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                                        <button type="submit">SUBMIT</button>
+                                        <p id="form-message"></p>
+                                    </form>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $("#contact-form").submit(function (e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                let formData = $(this).serialize(); // Serialize form data
+                console.log(formData)
+                $.ajax({
+                    type: "POST",
+                    url: "send_email.php",
+                    data: formData,
+                    success: function (response) {
+                        $("#form-message").text(response);
+                        $("#contact-form")[0].reset(); // Reset form on success
+                    },
+                    error: function () {
+                        $("#form-message").text("Error sending message.");
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

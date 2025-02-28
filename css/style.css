@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* <weight>: Use a value from 400 to 700
+ <uniquifier>: Use a unique and descriptive class name
+*/
+.poltawski-nowy-uniquifier {
+  font-family: "Poltawski Nowy", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/* <weight>: Use a value from 100 to 900
+ <uniquifier>: Use a unique and descriptive class name
+*/
+.inter-tight-uniquifier {
+  font-family: "Inter Tight", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/* General Styling */
+body {
+    font-family: "Inter Tight", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #3850D5;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.hero-heading{
+    font-size: 4.75rem;
+    font-family: "Poltawski Nowy", serif;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+
+.hero-image, .image-radius{
+    border-radius: 100px;
+}
+
+.hero-btn{
+    background: #fff;
+    color: #6476DE;
+    padding: 0.75rem 3.5rem;
+    text-decoration: none !important;
+    border-radius: 45px;
+    font-size: 1.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: "Inter Tight", serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover{
+    background: #6476DE;
+    color: #fff;
+}
+
+.white-section{
+    background: #fff;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+}
+
+.text-blue{
+    color: #6476DE;
+}
+
+.text-box{
+    background: #E8EBFA;
+    padding: 3rem;
+    border-radius: 70px;
+}
+
+.text-box h3{
+    font-family: "Poltawski Nowy", serif;
+    font-weight: bold;
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+}
+
+.text-box p{
+    font-family: "Poltawski Nowy", serif;
+    font-weight: 500;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+
+/* form */
+
+.form-wrapper{
+    background-color: #3850D5;
+    padding: 4rem;  
+    border-radius: 100px;
+}
+
+.form-wrapper h1{
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: "Poltawski Nowy", serif;
+    font-weight: bold;
+}
+
+.form-wrapper h2{
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Poltawski Nowy", serif;
+    font-weight: bold;
+    max-width: 750px;
+    margin: auto;
+    margin-bottom: 4rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 18px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.35rem;
+}
+
+textarea{
+    height: 180px;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #6476DE;
+}
+
+button {
+    background: #fff;
+    border: none !important;
+    outline: none !important;
+    color: #6476DE;
+    padding: 0.75rem 3.5rem;
+    text-decoration: none !important;
+    border-radius: 45px;
+    font-size: 1.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: "Inter Tight", serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #6476DE;
+    color: #fff;
+}
+
+#form-message {
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 1080px) {
+    .hero-heading{
+        font-size: 3.75rem;
+    }
+    .text-box {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-heading{
+        font-size: 2.75rem;
+    }
+    .text-box {
+        padding: 3rem 2rem;
+    }
+}
