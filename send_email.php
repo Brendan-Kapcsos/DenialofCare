@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "Vote NO on Denial of Care provision (SB 68)!";
 
     // please replace abc@gmail.com with the website email, which should relate to the website
-    $headers = "From: abc@gmail.com\r\n";
+    $headers = "From: constituent@denialofcare.com\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "BCC: $bcc\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
